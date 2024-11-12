@@ -10,40 +10,40 @@ const settings = {
   API_HASH: process.env.API_HASH || "",
 
   AUTO_APPLY_TURBO: process.env.AUTO_APPLY_TURBO
-    ? process.env.AUTO_APPLY_TURBO.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_APPLY_TURBO.toLowerCase() === "false"
+    : false,
 
   AUTO_APPLY_ENERGY: process.env.AUTO_APPLY_ENERGY
-    ? process.env.AUTO_APPLY_ENERGY.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_APPLY_ENERGY.toLowerCase() === "false"
+    : false,
 
   AUTO_UPGRADE_DAMAGE: process.env.AUTO_UPGRADE_DAMAGE
-    ? process.env.AUTO_UPGRADE_DAMAGE.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_UPGRADE_DAMAGE.toLowerCase() === "false"
+    : false,
 
   AUTO_UPGRADE_RECHARGE: process.env.AUTO_UPGRADE_RECHARGE
-    ? process.env.AUTO_UPGRADE_RECHARGE.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_UPGRADE_RECHARGE.toLowerCase() === "false"
+    : false,
 
   AUTO_UPGRADE_ENERGY: process.env.AUTO_UPGRADE_ENERGY
-    ? process.env.AUTO_UPGRADE_ENERGY.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_UPGRADE_ENERGY.toLowerCase() === "false"
+    : false,
 
   AUTO_BUY_TAPBOT: process.env.AUTO_BUY_TAPBOT
-    ? process.env.AUTO_BUY_TAPBOT.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_BUY_TAPBOT.toLowerCase() === "false"
+    : false,
 
   AUTO_CLAIM_AND_START_TAPBOT: process.env.AUTO_CLAIM_AND_START_TAPBOT
-    ? process.env.AUTO_CLAIM_AND_START_TAPBOT.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_CLAIM_AND_START_TAPBOT.toLowerCase() === "false"
+    : false,
 
   AUTO_COMPLETE_TASKS: process.env.AUTO_COMPLETE_TASKS
     ? process.env.AUTO_COMPLETE_TASKS.toLowerCase() === "true"
     : true,
 
   AUTO_SPIN: process.env.AUTO_SPIN
-    ? process.env.AUTO_SPIN.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_SPIN.toLowerCase() === "false"
+    : false,
 
   MAX_DAMAGE_LEVEL: process.env.MAX_DAMAGE_LEVEL
     ? /^\d+$/.test(process.env.MAX_DAMAGE_LEVEL)
@@ -84,7 +84,7 @@ const settings = {
     process.env.DELAY_BETWEEN_STARTING_BOT &&
     _isArray(process.env.DELAY_BETWEEN_STARTING_BOT)
       ? JSON.parse(process.env.DELAY_BETWEEN_STARTING_BOT)
-      : [10, 50],
+      : [5, 7],
 
   DELAY_BETWEEN_TURBO:
     process.env.DELAY_BETWEEN_TURBO && _isArray(process.env.DELAY_BETWEEN_TURBO)
@@ -94,18 +94,18 @@ const settings = {
   DELAY_BETWEEN_TAPS:
     process.env.DELAY_BETWEEN_TAPS && _isArray(process.env.DELAY_BETWEEN_TAPS)
       ? JSON.parse(process.env.DELAY_BETWEEN_TAPS)
-      : [10, 50],
+      : [6, 8],
 
   DELAY_BETWEEN_TASKS:
     process.env.DELAY_BETWEEN_TASKS && _isArray(process.env.DELAY_BETWEEN_TASKS)
       ? JSON.parse(process.env.DELAY_BETWEEN_TASKS)
-      : [10, 50],
+      : [5, 8],
 
   SLEEP_BETWEEN_NON_THREADS:
     process.env.SLEEP_BETWEEN_NON_THREADS &&
     _isArray(process.env.SLEEP_BETWEEN_NON_THREADS)
       ? JSON.parse(process.env.SLEEP_BETWEEN_NON_THREADS)
-      : [1000, 3000],
+      : [7, 9],
 
   USE_PROXY_FROM_JS_FILE: process.env.USE_PROXY_FROM_JS_FILE
     ? process.env.USE_PROXY_FROM_JS_FILE.toLowerCase() === "true"
@@ -117,20 +117,20 @@ const settings = {
 
   USE_QUERY_ID: process.env.USE_QUERY_ID
     ? process.env.USE_QUERY_ID.toLowerCase() === "true"
-    : false,
+    : true,
 
   USE_PROXY_FROM_TXT_FILE: process.env.USE_PROXY_FROM_TXT_FILE
     ? process.env.USE_PROXY_FROM_TXT_FILE.toLowerCase() === "true"
     : false,
-  CAN_CREATE_SESSION: false,
+  CAN_CREATE_SESSION: true,
 
   USE_CODES_FROM_FILE: process.env.USE_CODES_FROM_FILE
     ? process.env.USE_CODES_FROM_FILE.toLowerCase() === "true"
     : true,
 
   AUTO_TAPPING: process.env.AUTO_TAPPING
-    ? process.env.AUTO_TAPPING.toLowerCase() === "true"
-    : true,
+    ? process.env.AUTO_TAPPING.toLowerCase() === "false"
+    : false,
 
   MAX_CONCURRENT_ACCOUNT:
     process.env.MAX_CONCURRENT_ACCOUNT &&
